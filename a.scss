@@ -1,0 +1,114 @@
+body {
+    background: #f1f1f1;
+    transition: .3s ease all;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 1.2rem;
+    transition: .3s ease all;
+    &.black {
+        background: #000;
+        color: #fff;
+        transition: .3s ease all;
+    }
+}
+
+.switch {
+    background-color: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    &::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #f1f1f1;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0px 0px 20px 2px rgba(0,0,0,.2);
+    }
+    &.active {
+        background: orange;
+        color: #000;
+        &::after {
+            right: 0;
+            left: unset;
+        }
+    }
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+    }
+}
+
+.navbar {
+    box-shadow: 0 5px 10px rgba(211, 211, 211, 0.288);
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    body.black & {
+        color: #f1f1f1;
+        background-color: #000;
+        box-shadow: 0 5PX 10PX rgba(211, 211, 211, 0.329);
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.links {
+    list-style: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+img{
+    height: 100px;
+    transition: .3s ease all;
+}
+
+h1{
+    font-family: "Oswald", sans-serif;
+    font-size: 6rem;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.heading{
+    text-align: center;
+}
+
+.secret{
+    text-align: center;
+}
+
+h2{
+    color: #f1f1f1;
+    font-family: "Oswald", sans-serif;
+    font-size: 6rem;
+    font-weight: 100;
+    margin: 0;
+    text-transform: uppercase;
+    transition: .3s ease all;
+}
